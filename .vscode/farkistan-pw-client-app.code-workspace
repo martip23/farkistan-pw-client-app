@@ -6,9 +6,11 @@
 	],
 	"settings": {
 		"cSpell.words": [
+			"Fark",
 			"Farkistan",
 			"Farkistani",
 			"webfonts"
-		]
+		],
+		"cSpell.language": "en,en-US"
 	}
 }
