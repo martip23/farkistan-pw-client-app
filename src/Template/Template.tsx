@@ -1,6 +1,6 @@
-import { FarkPurple } from '../Utilities/Constants';
-import Header from './Header';
-import { styled } from '@mui/material/styles';
+import Header from './Header'
+import Profile from '../ProfileInfo/Profile'
+import { styled } from '@mui/material/styles'
 
 const Container = styled('div')({
   width: '100vw',
@@ -9,13 +9,13 @@ const Container = styled('div')({
   display: 'flex',
   flexFlow: 'column',
   alignItems: 'center',
-  // backgroundColor: FarkPurple,
-});
+})
 
 export const Template = () => {
   return (
     <Container>
       <Header></Header>
+      <Profile />
     </Container>
-  );
-};
+  )
+}

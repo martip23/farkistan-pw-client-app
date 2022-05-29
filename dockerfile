@@ -12,7 +12,7 @@ RUN npm ci --silent
 COPY . ./
 RUN npm run build
 
-FROM base
+FROM base AS final
 RUN npm install -g serve
 COPY --from=build /app/build/ .
 

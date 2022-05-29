@@ -1,7 +1,7 @@
-import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, IconButton, Toolbar, Typography } from '@mui/material'
 
-import AuthenticationButton from '../Auth/AuthenticationButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import AuthenticationButton from '../Auth/AuthenticationButton'
+import MenuIcon from '@mui/icons-material/Menu'
 
 interface IProps {}
 
@@ -24,7 +24,7 @@ const Header = (props: IProps) => {
         <AuthenticationButton />
       </Toolbar>
     </AppBar>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

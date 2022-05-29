@@ -1,3 +1,3 @@
 // Style
-export const FarkPurple = '#666699';
-export const DarkGray = '#404048';
+export const FarkPurple = '#666699'
+export const DarkGray = '#404048'
