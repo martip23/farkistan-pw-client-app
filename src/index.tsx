@@ -1,29 +1,15 @@
 import './index.css'
 
-import {
-  ApolloClient,
-  ApolloProvider,
-  InMemoryCache,
-  createHttpLink,
-} from '@apollo/client'
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
 import { DarkGray, FarkPurple } from './Utilities/Constants'
 
+import { ApolloProviderWrapper } from './Auth/ApolloProviderWrapper'
 import { Auth0Provider } from '@auth0/auth0-react'
 import { BrowserRouter } from 'react-router-dom'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Template } from './Template/Template'
 import reportWebVitals from './reportWebVitals'
-
-const httpLink = createHttpLink({
-  uri: 'http://localhost:5050',
-})
-
-const client = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache(),
-})
 
 const theme = createTheme({
   palette: {
@@ -47,12 +33,12 @@ root.render(
         audience="https://dev-xhex-dy1.us.auth0.com/api/v2/"
         scope="read:current_user update:current_user_metadata"
       >
-        <ApolloProvider client={client}>
+        <ApolloProviderWrapper>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Template />
           </ThemeProvider>
-        </ApolloProvider>
+        </ApolloProviderWrapper>
       </Auth0Provider>
     </React.StrictMode>
   </BrowserRouter>
