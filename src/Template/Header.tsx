@@ -1,23 +1,14 @@
-import { AppBar, IconButton, Toolbar, Typography } from '@mui/material'
+import { AppBar, Toolbar, Typography } from '@mui/material'
 
 import AuthenticationButton from '../Auth/AuthenticationButton'
-import MenuIcon from '@mui/icons-material/Menu'
+import { MainMenuItems } from './NavMenu/MenuConfigs'
+import { NavMenu } from './NavMenu/NavMenu'
 
-interface IProps {}
-
-const Header = (props: IProps) => {
+const Header = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
-        </IconButton>
+        <NavMenu config={MainMenuItems} />
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Farkistani Web Tools
         </Typography>
